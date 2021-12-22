@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/testdb
+    username: test
+    password: test
+  jpa:
+    properties:
+      hibernate.dialect: org.hibernate.dialect.PostgreSQL95Dialect
+      hibernate.format_sql: true
+      hibernate.temp.use_jdbc_metadata_defaults: false
+      hibernate.jdbc.lob.non_contextual_creation: true
+    hibernate:
+      ddl-auto: update      
+    show-sql: true
+    
+logging:
+  level:
+    root: INFO
+
+server:
+  port: 8765
